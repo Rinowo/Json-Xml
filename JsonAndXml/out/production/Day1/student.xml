@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<user id="1">
+    <roles>
+        <role>Leader</role>
+        <role>Emloyee</role>
+        <role>Student</role>
+    </roles>
+    <name>Rinowo</name>
+    <email>Rinowogmail.com</email>
+    <phone>03312312312</phone>
+</user>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="gson-2.8.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../MVN/gson-2.8.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../../MVN/mssql-jdbc-8.2.2.jre8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
