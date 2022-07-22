@@ -32,7 +32,8 @@ public class Application {
                     String name = sc.next();
                     controller.findByNameXml(name);
                 }
-                case 6 -> System.exit(0);
+                case 6 -> controller.jsonToDB();
+                case 7 -> System.exit(0);
             }
         }
     }
@@ -43,6 +44,7 @@ public class Application {
         System.out.println("3. Write data to XML");
         System.out.println("4. Find by product name JSON");
         System.out.println("5. Find by product name XML");
-        System.out.println("6. Exit");
+        System.out.println("6. Json to DB");
+        System.out.println("7. Exit");
     }
 }

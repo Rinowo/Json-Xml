@@ -14,10 +14,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.*;
@@ -30,7 +27,7 @@ public class Controller {
     Product product = new Product();
 
     public Connection getConnection() throws SQLException {
-        String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=Product Manament";
+        String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=Product Management";
         String username = "Rinowo";
         String password = "Rinochan205.";
         return DriverManager.getConnection(dbURL, username, password);
@@ -142,5 +139,22 @@ public class Controller {
                 System.err.println("Not Found");
             }
         }
+    }
+
+    public void jsonToDB() throws SQLException, FileNotFoundException {
+        FileReader reader = new FileReader("Product.json");
+        list = new Gson().fromJson(reader, new TypeToken<List<Product>>(){}.getType());
+
+        for (Product product :
+                list) {
+            String query = "INSERT INTO product VALUES (?,?,?,?)";
+            PreparedStatement preparedStatement = getConnection().prepareStatement(query);
+            preparedStatement.setString(1,product.getName());
+            preparedStatement.setDouble(2,product.getPrice());
+            preparedStatement.setInt(3,product.getQuantity());
+            preparedStatement.setString(4,product.getDescription());
+            preparedStatement.executeUpdate();
+        }
+
     }
 }

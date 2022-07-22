@@ -1,15 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Store>
-    <Product id="4">
-        <name>Iphone</name>
-        <price>123.0</price>
-        <quantity>2</quantity>
-        <description>asldnjk</description>
-    </Product>
-    <Product id="5">
-        <name>Macbook</name>
-        <price>1000.0</price>
-        <quantity>5</quantity>
-        <description>Macbook2022</description>
-    </Product>
-</Store>
+<Store/>

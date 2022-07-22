@@ -12,4 +12,16 @@
         <quantity>5</quantity>
         <description>Macbook2022</description>
     </Product>
+    <Product id="7">
+        <name>Iphone</name>
+        <price>123.0</price>
+        <quantity>2</quantity>
+        <description>asldnjk</description>
+    </Product>
+    <Product id="8">
+        <name>Macbook</name>
+        <price>1000.0</price>
+        <quantity>5</quantity>
+        <description>Macbook2022</description>
+    </Product>
 </Store>
